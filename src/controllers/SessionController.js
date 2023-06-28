@@ -18,7 +18,7 @@ class  SessionControler{
             user = await User.create({email})
          }
 
-        return res.json({message:"Email já cadastrado!"})
+        return res.json(user)
     }
 }
 
