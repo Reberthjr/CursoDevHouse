@@ -1,6 +1,7 @@
 import express from 'express';
 import routes from './routes';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import Path from 'path';
 import exp from 'constants';
 import path from 'path';
@@ -22,6 +23,7 @@ constructor(){
 }
 
 middlewares(){
+    this.server.use(cors());
 
     this.server.use(
         '/files',
